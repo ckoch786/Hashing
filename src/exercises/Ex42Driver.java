@@ -21,6 +21,9 @@ public class Ex42Driver {
 		
 		//Fill hash table with division method
 		for (int i = 0; i < values.length; i++){
+			if (hashTable[values[i] % hashTable.length] == 0){
+				System.out.println("There is a collision with " +i + " hash table index and "+ values[i]);
+			}
 			hashTable[values[i] % hashTable.length] = values[i];
 		}
 		//Print out hashTable
